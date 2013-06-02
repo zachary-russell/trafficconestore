@@ -1609,3 +1609,8 @@ Media Queries
 a:hover {
     color: #ff6600;
 }
+
+.entry-title,
+.entry-footer {
+    text-align: center;
+}

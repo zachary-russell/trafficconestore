@@ -17,7 +17,7 @@ function home_archive_query($query) {
 function home_archive_post_class($classes) {
     $classes[] = 'one-third';
     global $wp_query;
-    if (!$wp_query->current_post or !$wp_query->current_post % 3) {
+    if (!$wp_query->current_post or !($wp_query->current_post % 3)) {
         $classes[] = 'first';
     }
 
