@@ -32,9 +32,21 @@ add_theme_support('genesis-menus', array(
     'tertiary'  => 'Tertiary Navigation Menu'
 ));
 
+add_theme_support('post-thumbnails');
+
 add_action('genesis_after_header', 'tertiary_nav');
 function tertiary_nav() {
     require(CHILD_DIR . '/tertiary-nav.php');
 }
 
-add_image_size('grid-thumbnail', 100, 100, TRUE);
+add_image_size('grid-thumbnail', 200, 200, TRUE);
+
+function new_post_info() {
+    global $post;
+    if (get_post_type($post->ID) == 'page') {
+        return;
+    }
+
+    $post_info = '[post_date] ' . __('by', 'genesis') . ' [post_author_posts_link] [post_edit]';
+    printf('<div class="post-info">%s</div>', apply_filters('genesis_post_info', $post_info));
+}

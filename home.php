@@ -24,4 +24,13 @@ function home_archive_post_class($classes) {
     return $classes;
 }
 
+remove_action('genesis_entry_header', 'genesis_do_post_title');
+remove_action('genesis_entry_header', 'genesis_post_info');
+remove_action('genesis_entry_footer', 'genesis_post_meta');
+// remove_action('genesis_entry_content', 'genesis_do_post_image');
+remove_action('genesis_entry_content', 'genesis_do_post_content');
+add_action('genesis_entry_footer', 'new_post_info');
+add_action('genesis_entry_header', 'genesis_do_post_title');
+
+
 genesis();
