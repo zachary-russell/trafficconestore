@@ -36,3 +36,5 @@ add_action('genesis_after_header', 'tertiary_nav');
 function tertiary_nav() {
     require(CHILD_DIR . '/tertiary-nav.php');
 }
+
+add_image_size('grid-thumbnail', 100, 100, TRUE);
