@@ -1559,8 +1559,21 @@ Media Queries
 }
 
 /** Tertiary navigation for categories. */
-.menu.tertiary-nav-menu ul {
+#tertiary-nav {
+    display: inline;
+}
+
+#tertiary-nav ul {
     list-style: none;
+}
+
+#tertiary-nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#tertiary-nav ul li a {
+    color: rgb(241, 241, 241);
 }
 
 .menu.tertiary-nav-menu {
@@ -1572,10 +1585,6 @@ Media Queries
 #tertiary-nav-container {
     background-color: rgb(95, 95, 95);
     margin-top: -2px;
-}
-
-.menu.tertiary-nav-menu ul li a {
-    color: rgb(241, 241, 241);
 }
 
 .site-footer {
