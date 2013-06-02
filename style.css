@@ -1561,6 +1561,7 @@ Media Queries
 /** Tertiary navigation for categories. */
 #tertiary-nav {
     display: inline;
+    float: left;
 }
 
 #tertiary-nav ul {
@@ -1573,13 +1574,22 @@ Media Queries
 }
 
 #tertiary-nav ul li a {
+    text-transform: uppercase;
+}
+
+#tertiary-nav-right,
+#tertiary-nav ul li a {
     color: rgb(241, 241, 241);
 }
 
+#tertiary-nav-right {
+    float: right;
+}
+
+#tertiary-nav-right,
 .menu.tertiary-nav-menu {
     font-family: 'Lato', sans-serif;
     padding: 0.6em 1.3em;
-    text-transform: uppercase;
 }
 
 #tertiary-nav-container {

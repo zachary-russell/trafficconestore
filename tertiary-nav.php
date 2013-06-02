@@ -8,5 +8,6 @@ wp_nav_menu(array(
     'theme_location'    => 'tertiary'
 ));
 ?>
+    <span id="tertiary-nav-right">Call Now! 800-683-9963</span>
     </div>
 </div>
