@@ -32,7 +32,7 @@ add_theme_support('genesis-menus', array(
     'tertiary'  => 'Tertiary Navigation Menu'
 ));
 
-add_theme_support('post-thumbnails');
+// add_theme_support('post-thumbnails');
 
 add_action('genesis_after_header', 'tertiary_nav');
 function tertiary_nav() {
@@ -51,3 +51,4 @@ function new_post_info() {
     printf('<div class="post-info">%s</div>', apply_filters('genesis_post_info', $post_info));
 }
 
+remove_action('genesis_entry_content', 'genesis_do_post_image');
